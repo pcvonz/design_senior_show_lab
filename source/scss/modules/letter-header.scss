@@ -1,0 +1,23 @@
+.letter-header {
+  height: 200px;
+  overflow: hidden;
+  div { 
+    height: 200px;
+    width: 13em;
+    float: left;
+    position: relative;
+    background-repeat: repeat-y;
+  }
+  #d{
+   background-image: url("../images/letters/d/out.png");
+   }
+  #s {
+   background-image: url("../images/letters/s/out.png");
+  }
+  #g {
+   background-image: url("../images/letters/g/out.png");
+  }
+  #n {
+   background-image: url("../images/letters/n/out.png");
+  }
+}
