@@ -22,7 +22,7 @@ gulp.task('nunjucks', function () {
 
 //Function to optimize images (not really utilized)
 gulp.task('images', function() {
-    return gulp.src('source/images/**/*.+(png|jpg|gif|svg)')
+    return gulp.src('source/images/**/*.+(png|jpg|gif)')
                                        .pipe(imagemin())
                                        .pipe(gulp.dest('public/images'))
 
@@ -66,5 +66,5 @@ gulp.task('watch', ['nunjucks', 'sass', 'images', 'js', 'browserSync'], function
     gulp.watch('source/scss/**/*.scss', ['sass']);
     gulp.watch('templates/**/*.html', ['nunjucks']);
     gulp.watch('source/js/**/*.js', ['js', browserSync.reload]);
-    gulp.watch('source/images/**/*.+(png|jpg|gif|svg)', ['images', browserSync.reload]);
+    gulp.watch('source/images/**/*.+(png|jpg|gif)', ['images', browserSync.reload]);
 });
