@@ -1,0 +1,33 @@
+$end-height: 40em;
+.no-height {
+  height: 0;
+  overflow: visible;
+}
+.line {
+  height: $end-height;
+  width: 1em;
+  @include push(7 of 12);
+  @include breakpoint($tablet) {
+    @include push(10 of 12);
+  
+  }
+  animation: draw 3s;
+  p {
+     position: relative;
+     left: 2em; 
+     font-size: .8em;
+     text-transform: uppercase;
+     color: $yellow;
+     font-family: $mono-font;
+     font-weight: 800;
+  }
+}
+
+@keyframes draw {
+  from {
+    height: 0em;
+  }
+  to {
+    height: $end-height;
+  }
+}

@@ -1,12 +1,40 @@
+h1{
+  text-transform: uppercase;
+  font-size: 2em;
+  line-height: .3;
+  @include breakpoint($tablet) {
+    font-size: 5em;
+  }
+}
+.header-text {
+  height: 4em;
+  h1:nth-child(2) {
+    margin-left: 3em;
+  }
+}
+
 .letter-header {
-  height: 200px;
-  overflow: hidden;
+  max-width: 40em;
+  margin: 0 auto;
+  height: 400px;
+  @include breakpoint($tablet) {
+  height: 222px;
+  }
+
   div { 
     height: 200px;
-    width: 13em;
+    @include gallery(6 of 12);
+    @include breakpoint($tablet) {
+      @include gallery(3 of 12);
+    }
     float: left;
     position: relative;
     background-repeat: repeat-y;
+  }
+  div:nth-child(2n) {
+    @include breakpoint($tablet) {
+      top: 4em; 
+    }
   }
   #d{
    background-image: url("../images/letters/d/out.png");
@@ -20,4 +48,29 @@
   #n {
    background-image: url("../images/letters/n/out.png");
   }
+}
+
+header {
+  width: 100%;
+  max-width: 25em;
+  @include breakpoint($tablet) {
+    max-width: 80em;
+  }
+  margin: 0 auto;
+}
+$header-block-height: 25em;
+$header-block-height-desk: 11em;
+.header-block {
+  width: 100%;
+  position: relative;
+  z-index: -20;
+  height: $header-block-height;
+  bottom: $header-block-height;
+  margin-bottom: -$header-block-height;
+  @include breakpoint($tablet) {
+    height: $header-block-height-desk;
+    bottom: $header-block-height-desk;
+    margin-bottom: -$header-block-height-desk;
+  }
+
 }

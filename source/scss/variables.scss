@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Overpass+Mono');
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1920px;
+
+$turq: #31BCB4;
+$red: #FA3247;
+$light-red: #FA5E73;
+$blue: #19215E;
+$gray: #FA5E73;
+$yellow: #FFCC02;
+.yellow {
+  background-color: #FFCC02;
+
+}
+.turq {
+  background-color: #31BCB4;
+
+}
+.red {
+  background-color: #FA3247;
+
+}
+.light-red {
+  background-color: #FA5E73;
+
+}
+.blue {
+  background-color: #19215E;
+
+}
+.gray {
+  background-color: #FA5E73;
+
+}
+
+$mono-font: 'Overpass Mono', monospace;
+$sans-font: 'Lato', sans-serif;
+h1 {
+  font-family: $mono-font;
+}
+body {
+  font-family: $sans-font;
+}
