@@ -13,61 +13,19 @@ header {
 
 h1{
   text-transform: uppercase;
+  font-weight: 700;
   font-size: 2em;
   line-height: .3;
   @include breakpoint($tablet) {
     font-size: 5em;
   }
 }
-.header-text {
-  height: 4em;
-  h1:nth-child(2) {
-    margin-left: 3em;
-  }
-  @include push(2 of 12);
-}
 
-.letter-header {
-  max-width: 40em;
-  margin: 0 auto;
-  height: 400px;
-  @include breakpoint($tablet) {
-  height: 222px;
-  }
-
-  div { 
-    height: 200px;
-    @include gallery(6 of 12);
-    @include breakpoint($tablet) {
-      @include gallery(3 of 12);
-    }
-    float: left;
-    position: relative;
-    background-repeat: repeat-y;
-  }
-  div:nth-child(2n) {
-    @include breakpoint($tablet) {
-      top: 4em; 
-    }
-  }
-  #d{
-   background-image: url("../images/letters/d/out.png");
-   }
-  #s {
-   background-image: url("../images/letters/s/out.png");
-  }
-  #g {
-   background-image: url("../images/letters/g/out.png");
-  }
-  #n {
-   background-image: url("../images/letters/n/out.png");
-  }
-}
 
 $header-block-height: 25em;
-$header-block-height-desk: 11em;
+$header-block-height-desk: 13em;
 .header-block {
-  width: 100%;
+  width: 80%;
   position: relative;
   z-index: -20;
   height: $header-block-height;

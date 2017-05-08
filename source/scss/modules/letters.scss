@@ -1,0 +1,34 @@
+.letter-header {
+  max-width: 40em;
+  margin: 0 auto;
+  height: 400px;
+  @include breakpoint($tablet) {
+    height: 222px;
+  }
+
+  div:nth-child(2n) {
+    top: 3em;
+  }
+  div { 
+    height: 200px;
+    @include gallery(6 of 12);
+    @include breakpoint($tablet) {
+      @include gallery(3 of 12);
+    }
+    float: left;
+    position: relative;
+    background-repeat: repeat-y;
+  }
+  #d{
+   background-image: url("../images/letters/d/out.png");
+   }
+  #s {
+   background-image: url("../images/letters/s/out.png");
+  }
+  #g {
+   background-image: url("../images/letters/g/out.png");
+  }
+  #n {
+   background-image: url("../images/letters/n/out.png");
+  }
+}

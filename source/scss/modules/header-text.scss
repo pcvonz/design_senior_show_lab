@@ -1,0 +1,23 @@
+.header-text {
+  height: 5.5em;
+  position: relative;
+  right: 0;
+  z-index: -21;
+  h1:nth-child(2) {
+    margin-left: 3em;
+    text-align: right;
+  }
+  @include push(2 of 12);
+  animation: slide-left .5s;
+}
+
+@keyframes slide-left {
+  from {
+    right: 10em;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
