@@ -3,7 +3,6 @@
   @include breakpoint($tablet) {
     @include span(7 of 12);
   }
-  @include span(6 of 12);
   height: 20em;
   h1 {
     line-height: 2;

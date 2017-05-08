@@ -1,13 +1,13 @@
 body {
   padding: 0;
   margin: 0;
-  @include container(12 center 100%);
-  @include breakpoint($tablet) {
-    @include container(12 center 90%);
-  }
 }
 
 
 .container {
+  @include container(12 center 100%);
+  @include breakpoint($tablet) {
+    @include container(12 center 90%);
+  }
   margin-top: 10em;
 }

@@ -42,3 +42,16 @@ h1 {
 body {
   font-family: $sans-font;
 }
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  debug: (
+    image: show,
+    color: transparentize(blue, .7),
+    output: overlay,
+    toggle: top right,
+  ),
+);

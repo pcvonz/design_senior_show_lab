@@ -6,9 +6,8 @@ $end-height: 40em;
 .line {
   height: $end-height;
   width: 1em;
-  @include push(7 of 12);
+  @include push(8 of 12);
   @include breakpoint($tablet) {
-    @include push(10 of 12);
   
   }
   animation: draw 3s;
@@ -20,6 +19,7 @@ $end-height: 40em;
      color: $yellow;
      font-family: $mono-font;
      font-weight: 800;
+     width: 15em;
   }
 }
 
