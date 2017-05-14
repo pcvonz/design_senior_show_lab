@@ -11,15 +11,6 @@ header {
   margin: 0 auto;
 }
 
-h1{
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 2em;
-  line-height: .3;
-  @include breakpoint($tablet) {
-    font-size: 5em;
-  }
-}
 
 
 //$header-block-height: 25em;

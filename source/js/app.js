@@ -1,6 +1,23 @@
 "use strict"
 
-var TWEEN = require("tween.js")
+var TWEEN = require("tween.js");
+var boid = require("boids");
+
+var boidCount = 31; 
+var flock = boid({
+  boids: boidCount,              // The amount of boids to use 
+  speedLimit: 1.1,          // Max steps to take per tick 
+  accelerationLimit: .1,   // Max acceleration per tick 
+  separationDistance: 80, // Radius at which boids avoid others 
+  alignmentDistance: 80, // Radius at which boids align with others 
+  choesionDistance: 200,  // Radius at which boids approach others 
+  separationForce: .65,  // Speed to avoid at 
+  alignmentForce: 10,   // Speed to align with other boids 
+  choesionForce: 1000,     // Speed to move towards other boids 
+  attractors: [ [300, 500, 1000, .1, ]]
+})
+
+
 
 function randRange(min, max) {
   var modifier = "-";
@@ -68,8 +85,36 @@ var n_tween = new TWEEN.Tween(n_coord)
 requestAnimationFrame(animate);
 
 function animate(time) {
+	flock.tick();
+	update_flock();
   requestAnimationFrame(animate);
   TWEEN.update(time);
+}
+
+var letter_list = [] 
+
+function loadLetters(letter, amount) {
+	for(var i = 0; i < amount; i++) {
+		var el = document.createElement("div");
+		var childEl = document.createElement("div");
+		el.className = "no-height";
+		el.className = "letter";
+		childEl.style.backgroundImage = "url(../images/letters/"+ letter +"/" + letter + "-" + i + ".png)";
+		el.appendChild(childEl);
+		document.body.appendChild(el);		
+		letter_list.push(el);
+	}
+}
+loadLetters("d", 7);
+loadLetters("g", 8);
+loadLetters("n", 9);
+loadLetters("s", 7);
+
+function update_flock() {
+	for(var i = 0; i < flock.boids.length; i++) {
+	  letter_list[i].style.left= flock.boids[i][0];
+	  letter_list[i].style.top= flock.boids[i][1];
+	}	
 }
 
 d_tween.easing(TWEEN.Easing.Quadratic.In);

@@ -18,18 +18,22 @@
   }
   #d{
    background-image: url("../images/letters/d/out.png");
+   background-repeat: repeat-y;
    background-color: $red;
    }
   #s {
    background-image: url("../images/letters/s/out.png");
+   background-repeat: repeat-y;
    background-color: $blue;
   }
   #g {
    background-image: url("../images/letters/g/out.png");
+   background-repeat: repeat-y;
    background-color: $yellow;
   }
   #n {
    background-image: url("../images/letters/n/out.png");
+   background-repeat: repeat-y;
    background-color: $turq;
   }
 }

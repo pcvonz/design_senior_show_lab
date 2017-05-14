@@ -1,25 +1,34 @@
 $end-height: 40em;
+$end-width: 100%;
 .no-height {
   height: 0;
   overflow: visible;
 }
 .line {
-  height: $end-height;
-  width: 1em;
-  @include push(8 of 12);
+  animation: drawHorizontal 3s;
+  width: $end-width;
+  height: 1em;
+
   @include breakpoint($tablet) {
-  
+    height: $end-height;
+    width: 1em;
+    @include push(7 of 12);
+    animation: draw 3s;
   }
-  animation: draw 3s;
   p {
      position: relative;
-     left: 2em; 
-     font-size: .8em;
-     text-transform: uppercase;
+     top: 1em;
+     left: 1em;
      color: $yellow;
      font-family: $mono-font;
      font-weight: 800;
      width: 15em;
+     text-transform: uppercase;
+    @include breakpoint($tablet) {
+       left: 2em; 
+       font-size: .8em;
+       width: 15em;
+     }
   }
 }
 
@@ -29,5 +38,13 @@ $end-height: 40em;
   }
   to {
     height: $end-height;
+  }
+}
+@keyframes drawHorizontal {
+  from {
+    width: 0em;
+  }
+  to {
+    width: $end-width;
   }
 }

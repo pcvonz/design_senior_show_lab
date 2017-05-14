@@ -1,0 +1,45 @@
+.letter {
+  z-index: -1000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  div {
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+  }
+}
+
+#floating_g {
+  position: absolute;
+  div {
+    background-image: url("../images/letters/g/g-0.png");
+    width: 100px;
+    height: 200px;
+  }
+}
+#floating_d {
+  position: absolute;
+  div {
+    background-image: url("../images/letters/d/d-0.png");
+    width: 100px;
+    height: 200px;
+  }
+}
+#floating_s {
+  position: absolute;
+  div {
+    background-image: url("../images/letters/s/s-0.png");
+    width: 100px;
+    height: 200px;
+  }
+}
+#floating_n {
+  position: absolute;
+  div {
+    background-image: url("../images/letters/n/n-0.png");
+    width: 100px;
+    height: 200px;
+  }
+}

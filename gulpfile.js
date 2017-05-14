@@ -4,6 +4,7 @@ var browserSync = require('browser-sync').create();
 var nunjucks = require('gulp-nunjucks');
 var imagemin = require('gulp-imagemin');
 var browserify = require('gulp-browserify');
+var sourcemaps = require('gulp-sourcemaps');
 
 
 //TODO:
@@ -38,10 +39,12 @@ gulp.task('js', function() {
 
 gulp.task('sass', function(){
     return gulp.src('source/style.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'compressed',
             includePaths: ['node_modules/susy/sass', 'node_modules/breakpoint-sass/stylesheets']
         }).on('error', sass.logError))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('public/css/'))
         .pipe(browserSync.reload({
             stream: true
