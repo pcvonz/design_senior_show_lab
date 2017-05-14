@@ -22,19 +22,19 @@ h1{
 }
 
 
-$header-block-height: 25em;
-$header-block-height-desk: 13em;
-.header-block {
-  width: 80%;
-  position: relative;
-  z-index: -20;
-  height: $header-block-height;
-  bottom: $header-block-height;
-  margin-bottom: -$header-block-height;
-  @include breakpoint($tablet) {
-    height: $header-block-height-desk;
-    bottom: $header-block-height-desk;
-    margin-bottom: -$header-block-height-desk;
-  }
-
-}
+//$header-block-height: 25em;
+//$header-block-height-desk: 14em;
+//.header-block {
+//  width: 80%;
+//  position: relative;
+//  z-index: -20;
+//  height: $header-block-height;
+//  bottom: $header-block-height;
+//  margin-bottom: -$header-block-height;
+//  @include breakpoint($tablet) {
+//    height: $header-block-height-desk;
+//    bottom: $header-block-height-desk;
+//    margin-bottom: -$header-block-height-desk;
+//  }
+//
+//}

@@ -6,9 +6,6 @@
     height: 222px;
   }
 
-  div:nth-child(2n) {
-    top: 3em;
-  }
   div { 
     height: 200px;
     @include gallery(6 of 12);
@@ -21,14 +18,18 @@
   }
   #d{
    background-image: url("../images/letters/d/out.png");
+   background-color: $red;
    }
   #s {
    background-image: url("../images/letters/s/out.png");
+   background-color: $blue;
   }
   #g {
    background-image: url("../images/letters/g/out.png");
+   background-color: $yellow;
   }
   #n {
    background-image: url("../images/letters/n/out.png");
+   background-color: $turq;
   }
 }
