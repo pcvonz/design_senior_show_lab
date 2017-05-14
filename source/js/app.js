@@ -99,7 +99,7 @@ function loadLetters(letter, amount) {
 		var childEl = document.createElement("div");
 		el.className = "no-height";
 		el.className = "letter";
-		childEl.style.backgroundImage = "url(../images/letters/"+ letter +"/" + letter + "-" + i + ".png)";
+		childEl.style.backgroundImage = "url(./images/letters/"+ letter +"/" + letter + "-" + i + ".png)";
 		el.appendChild(childEl);
 		document.body.appendChild(el);		
 		letter_list.push(el);
