@@ -1,8 +1,9 @@
 .letter-header {
   margin: 0 auto;
-  height: 800px;
+  height: 200px;
+  
   @include breakpoint($tablet) {
-    height: 222px;
+    height: 410px;
   }
 
   div.letter-container { 
