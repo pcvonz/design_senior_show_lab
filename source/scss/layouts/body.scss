@@ -1,6 +1,0 @@
-body {
-  margin-top: 2em;
-  @include breakpoint($tablet) {
-    margin-top: 5em;
-  }
-}
