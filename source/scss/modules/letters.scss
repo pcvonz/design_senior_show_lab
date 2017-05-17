@@ -1,13 +1,11 @@
 .letter-header {
-  max-width: 40em;
   margin: 0 auto;
-  height: 400px;
+  height: 800px;
   @include breakpoint($tablet) {
     height: 222px;
   }
 
-  div { 
-    height: 200px;
+  div.letter-container { 
     @include gallery(6 of 12);
     @include breakpoint($tablet) {
       @include gallery(3 of 12);
@@ -16,24 +14,19 @@
     position: relative;
     background-repeat: repeat-y;
   }
-  #d{
-   background-image: url("../images/letters/d/out.png");
-   background-repeat: repeat-y;
-   background-color: $red;
-   }
-  #s {
-   background-image: url("../images/letters/s/out.png");
-   background-repeat: repeat-y;
-   background-color: $blue;
+  .letter-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    div {
+     width: 100%;
+     height: 100%;
+    }
   }
-  #g {
-   background-image: url("../images/letters/g/out.png");
-   background-repeat: repeat-y;
-   background-color: $yellow;
-  }
-  #n {
-   background-image: url("../images/letters/n/out.png");
-   background-repeat: repeat-y;
-   background-color: $turq;
-  }
+}
+.letter {
+  float: left;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
