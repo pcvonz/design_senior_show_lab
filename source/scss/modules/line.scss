@@ -1,34 +1,22 @@
-$end-height: 40em;
+$end-height: 12em;
 $end-width: 100%;
 .no-height {
   height: 0;
   overflow: visible;
 }
 .line {
+  clear: both;
   animation: drawHorizontal 3s;
   width: $end-width;
   height: 1em;
+  margin: 0 auto;
+  background-color: black;
 
   @include breakpoint($tablet) {
+    clear: none;
     height: $end-height;
-    width: 1em;
-    @include push(7 of 12);
+    width: .1em;
     animation: draw 3s;
-  }
-  p {
-     position: relative;
-     top: 1em;
-     left: 1em;
-     color: $yellow;
-     font-family: $mono-font;
-     font-weight: 800;
-     width: 15em;
-     text-transform: uppercase;
-    @include breakpoint($tablet) {
-       left: 2em; 
-       font-size: .8em;
-       width: 15em;
-     }
   }
 }
 

@@ -1,5 +1,40 @@
-.guest-speaker {
-  @include span(12 of 12 last);
-  height: 30em;
-  background-color: $blue;
+#guest-speaker {
+  clear: both;
+  #guest-title {
+    text-align: center;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 24em;
+    padding: .1em 0;
+    margin-bottom: 4em;
+    h2 {
+      font-family: $mono-font, monospace;
+      font-size: 1.2em;
+    }
+    h1 {
+      color: $yellow;
+    }
+  }
+
+  #guest-speaker-image {
+    @include span(12 of 12);
+    @include breakpoint($tablet) {
+      @include span(6 of 12);
+      img {
+        float: right;
+      
+      }
+    }
+  }
+  #guest-speaker-info {
+    @include span(12 of 12);
+    @include breakpoint($tablet) {
+      @include span(6 of 12 last);
+      p {
+        max-width: 20em;
+      }
+    }
+  }
+    
+  margin-top: 4em;
 }

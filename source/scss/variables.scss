@@ -9,6 +9,7 @@ $light-red: #FA5E73;
 $blue: #19215E;
 $gray: #FA5E73;
 $yellow: #FFCC02;
+
 .yellow {
   background-color: #FFCC02;
 
@@ -38,9 +39,22 @@ $mono-font: 'Overpass Mono', monospace;
 $sans-font: 'Lato', sans-serif;
 h1 {
   font-family: $mono-font;
+  text-transform: uppercase;
+  padding-bottom: .2em;
+}
+h2 {
+  font-family: $sans-font;
+  margin-bottom: .2em;
 }
 body {
   font-family: $sans-font;
+}
+p {
+  font-family: $sans-font;
+  margin: .2em;
+}
+a {
+  text-decoration: none;
 }
 $susy: (
   columns: 12,
