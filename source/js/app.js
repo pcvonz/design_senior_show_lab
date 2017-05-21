@@ -2,10 +2,6 @@
 
 var TWEEN = require("tween.js");
 
-
-
-
-
 var d = document.getElementById("d");
 var s = document.getElementById("s");
 var g = document.getElementById("g");
@@ -23,7 +19,6 @@ var n_to = "-100";
 var d_tween = new TWEEN.Tween(d_coord)
   .to({ y: d_to}, 1000)
   .onUpdate(function() {
-    console.log(d_coord.y);
     d.style.transform = "translateY(" + d_coord.y + "%)";
   })
   .onComplete(function() {
@@ -66,8 +61,6 @@ function randRange(min, max, curr_pos) {
   if(Math.random() < .5) {
     modifier = "+";
   }
-  console.log(-max*100);
-  console.log(curr_pos-200);
   if(curr_pos+100 > 0) {
     modifier = "-";
   }
@@ -118,3 +111,22 @@ g_tween.chain(n_tween);
 n_tween.chain(d_tween);
 
 d_tween.start();
+
+var map = document.querySelector("#map");
+var nav = document.querySelector("nav");
+addEventListener("scroll", function() {
+  var mapTop = map.getBoundingClientRect().top; 
+  var mapBottom = map.getBoundingClientRect().bottom; 
+  var navTop = nav.getBoundingClientRect().top;
+  var navBottom = nav.getBoundingClientRect().bottom;
+
+  console.log(pageYOffset);
+  console.log(navTop);
+  console.log(navBottom);
+  if(mapTop < navBottom & mapBottom > navTop ) {
+    nav.id = "white-text"; 
+    console.log(nav);
+  } else {
+    nav.id ="";
+  }
+});

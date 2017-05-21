@@ -17,13 +17,15 @@
   }
 
   #guest-speaker-image {
+      img {
+        width: 50%;
+        padding: 1em;
+        float: left;
+      
+      }
     @include span(12 of 12);
     @include breakpoint($tablet) {
       @include span(6 of 12);
-      img {
-        float: right;
-      
-      }
     }
   }
   #guest-speaker-info {

@@ -1,0 +1,21 @@
+nav {
+  svg {
+    height: 64px;
+    .cls-4 {
+      fill: black;
+      transition: fill .2s;
+    }
+  }
+  position: fixed;
+  right: 1em;
+  top: 1em;
+  z-index: 20;
+}
+
+#white-text {
+  svg {
+    .cls-4 {
+      fill: white;
+    }
+  }
+}
