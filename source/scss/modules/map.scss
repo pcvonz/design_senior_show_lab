@@ -1,8 +1,11 @@
+.full-width {
+  width: 100%;
+}
 #map {
-  margin-bottom: 4em;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
   color: white;
-  @include span(12 of 12);
-  clear: both;
   padding: 2em;
   background-image: url("../images/map bg.png");
   background-repeat: no-repeat;

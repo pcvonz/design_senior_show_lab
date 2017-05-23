@@ -8,7 +8,7 @@ body {
   background-color: white;
   @include container(12 center 100%);
   @include breakpoint($tablet) {
-    @include container(12 center 80%);
+    @include container(12 center 1200px);
   }
   padding-bottom: 2em;
 }
