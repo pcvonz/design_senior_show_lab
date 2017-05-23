@@ -1,5 +1,5 @@
 $end-height: 16em;
-$end-width: 100%;
+$end-width: 80%;
 .no-height {
   height: 0;
   overflow: visible;
@@ -8,7 +8,7 @@ $end-width: 100%;
   clear: both;
   animation: drawHorizontal 3s;
   width: $end-width;
-  height: 1em;
+  height: .1em;
   margin: 0 auto;
   background-color: black;
 
@@ -26,6 +26,49 @@ $end-width: 100%;
   }
   to {
     height: $end-height;
+  }
+}
+@keyframes drawHorizontal {
+  from {
+    width: 0em;
+  }
+  to {
+    width: $end-width;
+  }
+}
+
+
+$end-height-circle: 10em;
+$end-width-circle: 100%;
+
+.center {
+	width: 100%;
+	height: 10em;
+	margin-bottom: 2em;
+}
+
+.circleyellow{
+	width: 0;
+	margin: 0 auto;
+	border-left: dotted 8px $yellow;
+	height: $end-height-circle;
+  animation: drawcircle 1s;
+}
+
+.circleturq{
+	width: 0;
+	margin: 0 auto;
+	border-left: dotted 8px $turq;
+	height: $end-height-circle;
+  animation: drawcircle 1s;
+}
+
+@keyframes drawcircle {
+  from {
+    height: 0em;
+  }
+  to {
+    height: $end-height-circle;
   }
 }
 @keyframes drawHorizontal {

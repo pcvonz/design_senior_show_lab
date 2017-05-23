@@ -10,4 +10,5 @@ body {
   @include breakpoint($tablet) {
     @include container(12 center 80%);
   }
+  padding-bottom: 2em;
 }
