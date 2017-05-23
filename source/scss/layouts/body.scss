@@ -1,6 +1,7 @@
 
 body {
   background-image: url("../images/test.png");
+  background-size: 50%;
 	padding: 0;
 	margin: 0;
   @include breakpoint($tablet) {

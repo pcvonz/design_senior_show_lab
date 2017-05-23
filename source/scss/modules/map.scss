@@ -4,21 +4,11 @@
   @include span(12 of 12);
   clear: both;
   padding: 2em;
-  height: auto;
-  background-image: url("../images/calloutpng_mobile.png");
+  height: 30em;
+  background-image: url("../images/map bg.png");
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 100%;
   background-position: top left;
-  @include breakpoint($tablet) {
-    background-image: url("../images/calloutpng.png");
-    background-size: 40%;
-    background-position: bottom right;
-  }
-  @include breakpoint($desktop) {
-    background-image: url("../images/calloutpng.png");
-    background-size: 500px;
-    background-position: bottom right;
-  }
 }
 #map-image {
   iframe {
