@@ -5,9 +5,14 @@
   "dependencies": {
     "boids": "^2.0.0",
     "breakpoint-sass": "^2.7.1",
+    "gulp-cache": "^0.4.6",
     "gulp-sourcemaps": "^2.6.0",
+    "node-normalize-scss": "^3.0.0",
     "nodemon": "^1.11.0",
+    "normalize-scss": "^7.0.0",
+    "normalize.css": "^7.0.0",
     "skeleton": "^0.1.2",
+    "skeleton-sass-official": "^3.1.4",
     "susy": "^2.2.12",
     "tween.js": "^16.6.0",
     "victor": "^1.1.0"

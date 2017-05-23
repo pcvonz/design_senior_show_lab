@@ -5,6 +5,7 @@ var nunjucks = require('gulp-nunjucks');
 var imagemin = require('gulp-imagemin');
 var browserify = require('gulp-browserify');
 var sourcemaps = require('gulp-sourcemaps');
+var cache = require('gulp-cache');
 
 
 //TODO:
@@ -24,7 +25,7 @@ gulp.task('nunjucks', function () {
 //Function to optimize images (not really utilized)
 gulp.task('images', function() {
     return gulp.src('source/images/**/*.+(png|jpg|gif)')
-                                       .pipe(imagemin())
+                                       .pipe(cache(imagemin()))
                                        .pipe(gulp.dest('public/images'))
 
 });
@@ -42,7 +43,7 @@ gulp.task('sass', function(){
         .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'compressed',
-            includePaths: ['node_modules/susy/sass', 'node_modules/breakpoint-sass/stylesheets']
+            includePaths: [require('node-normalize-scss').includePaths,  'node_modules/susy/sass', 'node_modules/susy/sass', 'node_modules/breakpoint-sass/stylesheets']
         }).on('error', sass.logError))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('public/css/'))
