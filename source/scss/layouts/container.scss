@@ -8,6 +8,6 @@ body {
   background-color: white;
   @include container(12 center 100%);
   @include breakpoint($tablet) {
-    @include container(12 center 70%);
+    @include container(12 center 80%);
   }
 }
