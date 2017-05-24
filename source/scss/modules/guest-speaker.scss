@@ -15,6 +15,7 @@
     h2 {
       font-family: $mono-font, monospace;
       font-size: 1.2em;
+      color: white;
     }
   }
 
@@ -33,6 +34,9 @@
     }
   }
   #guest-speaker-info {
+    h2 {
+      margin-bottom: .5em;
+    }
     text-align: center;
     @include span(12 of 12);
     @include breakpoint($tablet) {
