@@ -37,6 +37,9 @@ $yellow: #FFCC02;
 
 $mono-font: 'Overpass Mono', monospace;
 $sans-font: 'Lato', sans-serif;
+h1, h2, h3 {
+ letter-spacing: 2px; 
+}
 h1 {
   font-family: $mono-font;
   text-transform: uppercase;
@@ -60,6 +63,7 @@ p {
 a {
   text-decoration: none;
   color: $red;
+  font-family: $mono-font;
 }
 a:hover {
   color: $yellow;

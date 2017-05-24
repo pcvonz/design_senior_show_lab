@@ -1,0 +1,24 @@
+.slideshow {
+  clear: both;
+  position: relative;
+  #arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    cursor: pointer;
+    height: 1.5em;
+  }
+  #arrow-left{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 100;
+    cursor: pointer;
+    height: 1.5em;
+  }
+}
+.siema {
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+}

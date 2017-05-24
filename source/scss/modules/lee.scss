@@ -58,8 +58,15 @@ footer{
 	width:100%;
 	clear:both;
 	margin:0 auto;
-	padding-top:20px;
-	padding-bottom:20px;
+	padding-top:1px;
+	padding-bottom:1px;
+  background-image: url("../images/callout.png");
+  background-repeat: no-repeat;
+  background-size: 4em;
+  @include breakpoint($tablet) {
+    background-size: 10em;
+  }
+  background-position: bottom right;
 }
 
 .monofont{

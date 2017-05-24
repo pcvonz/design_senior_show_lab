@@ -19,7 +19,7 @@
     height: 100%;
     max-height: 15em;
     @include breakpoint($tablet) {
-      max-height: 35em;
+      max-height: 20em;
     }
   }
   
@@ -30,7 +30,17 @@
 
 }
 #map-text {
-  font-size: 1em;
+  font-size: .9em;
+  text-align: center;
+  @include breakpoint($tablet) {
+    text-align: left;
+  }
+  h1 {
+    font-size: 1.52em;
+  }
+  p {
+    font-family: $mono-font;
+  }
   @include span(12 of 12);
   @include breakpoint($tablet) {
     @include span(6 of 12);

@@ -1,6 +1,29 @@
 "use strict"
 
 var TWEEN = require("tween.js");
+var Siema = require("siema");
+const mySiema = new Siema({
+	perPage: {
+		768: 1,
+		769: 2,
+		1200: 3
+	}
+});
+
+// slideshow
+var aleft = document.querySelector("#arrow-right");
+var aright = document.querySelector("#arrow-left");
+
+aright.addEventListener("click", function() {
+	mySiema.prev();
+});
+aleft.addEventListener("click", function() {
+	mySiema.next();
+});
+
+
+
+
 
 var d = document.getElementById("d");
 var s = document.getElementById("s");
@@ -120,12 +143,8 @@ addEventListener("scroll", function() {
   var navTop = nav.getBoundingClientRect().top;
   var navBottom = nav.getBoundingClientRect().bottom;
 
-  console.log(pageYOffset);
-  console.log(navTop);
-  console.log(navBottom);
   if(mapTop < navBottom & mapBottom > navTop ) {
     nav.id = "white-text"; 
-    console.log(nav);
   } else {
     nav.id ="";
   }

@@ -4,6 +4,9 @@
   p {
     margin: 0 auto;
     max-width: 30em;
-    font-size: 1.22em;
+    font-size: 1em;
+    @include breakpoint($tablet) {
+      font-size: 1.22em;
+    }
   }
 }

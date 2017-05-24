@@ -11,6 +11,7 @@
     "nodemon": "^1.11.0",
     "normalize-scss": "^7.0.0",
     "normalize.css": "^7.0.0",
+    "siema": "^1.4.6",
     "skeleton": "^0.1.2",
     "skeleton-sass-official": "^3.1.4",
     "susy": "^2.2.12",
