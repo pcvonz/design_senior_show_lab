@@ -52,6 +52,9 @@
 }
 
 footer{
+  h4 {
+    margin-bottom: .5em;
+  }
 	background-color:#19215e;
 	color:white;
 	text-align:center;
@@ -60,9 +63,6 @@ footer{
 	margin:0 auto;
 	padding-top:1px;
 	padding-bottom:1px;
-  background-image: url("../images/callout.png");
-  background-repeat: no-repeat;
-  background-size: 4em;
   @include breakpoint($tablet) {
     background-size: 10em;
   }

@@ -4,7 +4,7 @@
     text-align: center;
     margin: 0 auto;
     text-align: center;
-    max-width: 30em;
+    max-width: 600px;
     padding: .1em 0;
     margin-bottom: 2em;
     h1 {
@@ -36,14 +36,18 @@
   #guest-speaker-info {
     h2 {
       margin-bottom: .5em;
+      text-align: center;
+      @include breakpoint($tablet) {
+        text-align: left;
+      }
     }
-    text-align: center;
+    text-align: left;
     @include span(12 of 12);
     @include breakpoint($tablet) {
       text-align: left;
       @include span(6 of 12 last);
       p {
-        max-width: 20em;
+        max-width: 16.3em;
       }
     }
   }

@@ -20,6 +20,8 @@
     max-height: 15em;
     @include breakpoint($tablet) {
       max-height: 20em;
+      max-width: 30em;
+      float: right;
     }
   }
   
@@ -36,7 +38,7 @@
     text-align: left;
   }
   h1 {
-    font-size: 1.52em;
+    font-size: 2em;
   }
   p {
     font-family: $mono-font;

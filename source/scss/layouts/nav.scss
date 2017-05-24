@@ -17,7 +17,29 @@ nav {
     z-index: 20;
     position: fixed;
   }
+  p {
+    text-align: center;
+    font-family: $mono-font;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .8em;
+    background-color: $gray;
+    color: black;
+    position: relative;
+    z-index: -100;
+    top: -2em;
+    opacity: 0;
+    transition: opacity .2s, top .2s
+  }
+  &:hover {
+    p {
+      top: 0em;
+      opacity: 1;
+    }
+  }
 }
+
+
 
 #white-text {
   svg {

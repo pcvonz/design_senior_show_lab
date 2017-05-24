@@ -3,7 +3,7 @@
   clear: both;
   p {
     margin: 0 auto;
-    max-width: 30em;
+    max-width: 600px;
     font-size: 1em;
     @include breakpoint($tablet) {
       font-size: 1.22em;
