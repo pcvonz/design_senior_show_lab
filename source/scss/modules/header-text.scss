@@ -1,5 +1,8 @@
 .header-text {
-  padding-top: 5em;
+  padding-top: 2em;
+  @include breakpoint($tablet) {
+    padding-top: 6em;
+  }
   h1{
     text-transform: uppercase;
     font-weight: 700;

@@ -37,11 +37,11 @@
   @include breakpoint($tablet) {
     text-align: left;
   }
-  h1 {
-    font-size: 2em;
+  h1 { font-size: 2em;
   }
   p {
     font-family: $mono-font;
+    max-width: 23.5em;
   }
   @include span(12 of 12);
   @include breakpoint($tablet) {
