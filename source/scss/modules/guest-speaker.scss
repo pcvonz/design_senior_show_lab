@@ -35,6 +35,7 @@
   }
   #guest-speaker-info {
     h2 {
+      margin-top: .2em;
       margin-bottom: .5em;
       text-align: center;
       @include breakpoint($tablet) {

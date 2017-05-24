@@ -3,7 +3,7 @@ body {
 	padding: 0;
 	margin: 0;
   @include breakpoint($tablet) {
-    background-image: url("../images/test.png");
+    background-image: url("../images/body_bg.png");
   }
 }
 
