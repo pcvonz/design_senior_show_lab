@@ -1,12 +1,21 @@
 .slideshow {
+  & p {
+    padding-top: 2em;
+  }
   clear: both;
   position: relative;
+  #slide-wrapper {
+    position: relative;
+  }
   #arrow-right {
     position: absolute;
     top: 50%;
     right: 10px;
     cursor: pointer;
-    height: 1.5em;
+    height: 2em;
+    @include breakpoint($tablet){ 
+      height: 1.5em;
+    }
   }
   #arrow-left{
     position: absolute;
@@ -14,7 +23,10 @@
     left: 10px;
     z-index: 100;
     cursor: pointer;
-    height: 1.5em;
+    height: 2em;
+    @include breakpoint($tablet){ 
+      height: 1.5em;
+    }
   }
 }
 .siema {

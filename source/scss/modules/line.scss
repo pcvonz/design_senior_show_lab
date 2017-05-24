@@ -38,44 +38,27 @@ $end-width: 80%;
 }
 
 
-$end-height-circle: 10em;
-$end-width-circle: 100%;
 
 .center {
 	width: 100%;
-	height: 10em;
 	margin-bottom: 2em;
 }
 
 .circleyellow{
-	width: 0;
+	width: 1em;
+  height: 1em;
 	margin: 0 auto;
-	border-left: dotted 8px $yellow;
-	height: $end-height-circle;
-  animation: drawcircle 1s;
+  margin-bottom: 1em;
+  border-radius: 100%;
+  background-color: $yellow;
 }
 
 .circleturq{
-	width: 0;
+	width: 1em;
+  height: 1em;
 	margin: 0 auto;
-	border-left: dotted 8px $turq;
-	height: $end-height-circle;
-  animation: drawcircle 1s;
+  border-radius: 100%;
+  margin-bottom: 1em;
+  background-color: $turq;
 }
 
-@keyframes drawcircle {
-  from {
-    height: 0em;
-  }
-  to {
-    height: $end-height-circle;
-  }
-}
-@keyframes drawHorizontal {
-  from {
-    width: 0em;
-  }
-  to {
-    width: $end-width;
-  }
-}
