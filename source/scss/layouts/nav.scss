@@ -6,10 +6,17 @@ nav {
       transition: fill .2s;
     }
   }
-  position: fixed;
-  right: 1em;
-  top: 1em;
-  z-index: 20;
+  text-align: center;
+  padding-top: .5em;
+  position: relative;
+  margin-bottom: -64px;
+  
+  @include breakpoint($tablet) {
+    right: 1em;
+    top: 1em;
+    z-index: 20;
+    position: fixed;
+  }
 }
 
 #white-text {

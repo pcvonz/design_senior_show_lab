@@ -6,7 +6,7 @@ body {
 
 .l-container {
   background-color: white;
-  @include container(12 center 100%);
+  @include container(12 center 90%);
   @include breakpoint($tablet) {
     @include container(12 center 1200px);
   }
