@@ -17,15 +17,17 @@ var aleft = document.querySelector("#arrow-right");
 var aright = document.querySelector("#arrow-left");
 var slidePause = 3000;
 var advance = true;
-var wait = 15;
+var wait = 0;
 
 aright.addEventListener("click", function() {
   mySiema.prev();
   window.delta = 0;
+  wait = 15;
 });
 aleft.addEventListener("click", function() {
   mySiema.next();
   window.delta = 0;
+  wait = 15;
 });
 
 function advanceSlideShow() {
@@ -35,11 +37,9 @@ function advanceSlideShow() {
 }
 
 function slideNext() {
-  console.log(window.delta);
   if ((window.delta / 100 / 60 / 60)> wait) {
     mySiema.next();
   }
-  console.log(window.delta / 100 / 60 / 60)
   advanceSlideShow();
 }
 
