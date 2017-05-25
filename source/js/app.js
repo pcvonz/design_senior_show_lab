@@ -2,26 +2,48 @@
 
 var TWEEN = require("tween.js");
 var Siema = require("siema");
+var slideImages = document.querySelectorAll(".siema > img");
 const mySiema = new Siema({
 	perPage: {
 		768: 1,
 		769: 2,
 		1200: 3
-	}
+	},
+  loop: true
 });
 
 // slideshow
 var aleft = document.querySelector("#arrow-right");
 var aright = document.querySelector("#arrow-left");
+var slidePause = 3000;
+var advance = true;
+var wait = 15;
 
 aright.addEventListener("click", function() {
-	mySiema.prev();
+  mySiema.prev();
+  window.delta = 0;
 });
 aleft.addEventListener("click", function() {
-	mySiema.next();
+  mySiema.next();
+  window.delta = 0;
 });
 
+function advanceSlideShow() {
+  setTimeout(function() {
+    slideNext();
+  }, slidePause);
+}
 
+function slideNext() {
+  console.log(window.delta);
+  if ((window.delta / 100 / 60 / 60)> wait) {
+    mySiema.next();
+  }
+  console.log(window.delta / 100 / 60 / 60)
+  advanceSlideShow();
+}
+
+advanceSlideShow();
 
 
 
@@ -96,9 +118,11 @@ function randRange(min, max, curr_pos) {
 
 requestAnimationFrame(animate);
 
+window.delta = 0;
 function animate(time) {
   requestAnimationFrame(animate);
   TWEEN.update(time);
+  window.delta += time;
 }
 
 var letter_list = [] 

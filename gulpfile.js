@@ -13,8 +13,8 @@ var cache = require('gulp-cache');
 //https://css-tricks.com/gulp-for-beginners/
 
 gulp.task('nunjucks', function () {
-    gulp.src('templates/*.html')
-        .pipe(nunjucks.compile({name: 'Test'}))
+    gulp.src('templates/index.html')
+        .pipe(nunjucks.compile({name: 'Index'}))
         .pipe(gulp.dest('public'))
         .pipe(browserSync.reload({
             stream: true
